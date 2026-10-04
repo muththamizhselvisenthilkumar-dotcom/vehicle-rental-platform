@@ -1,0 +1,238 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DriveNow - Vehicle Rental Platform</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= LOGIN ================= -->
+
+<div id="loginPage" class="login-page">
+
+    <div class="login-card">
+
+        <div class="login-logo">🚗</div>
+
+        <h1>DriveNow</h1>
+
+        <p>Vehicle Rental Platform</p>
+
+        <form id="loginForm">
+
+            <label>User ID</label>
+
+            <input
+                type="text"
+                id="userId"
+                placeholder="Enter User ID"
+                required
+            >
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter Password"
+                required
+            >
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+        <div class="demo-login">
+            Demo Login: <b>USER001</b> / <b>1234</b>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= MAIN APP ================= -->
+
+<div id="app" class="app hidden">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🚗
+            </div>
+
+            <div>
+                <h2>DriveNow</h2>
+                <small>Rental Platform</small>
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <button
+                class="nav-btn active"
+                onclick="showPage('home', this)">
+                🏠 Home
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="showPage('vehicles', this)">
+                🚘 Vehicles
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="showPage('bookings', this)">
+                📋 My Bookings
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="showPage('profile', this)">
+                👤 Profile
+            </button>
+
+        </nav>
+
+
+        <button
+            class="logout"
+            onclick="logout()">
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h2 id="pageTitle">
+                    Dashboard
+                </h2>
+
+                <p id="currentDate"></p>
+
+            </div>
+
+
+            <div class="top-user">
+
+                <div class="notification">
+                    🔔
+                    <span id="bookingCount">
+                        0
+                    </span>
+                </div>
+
+                <div class="user-avatar">
+                    U
+                </div>
+
+                <div>
+                    <b>John Kumar</b>
+                    <small>Customer</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= HOME ================= -->
+
+        <section
+            id="home"
+            class="page active-page">
+
+            <div class="hero">
+
+                <div>
+
+                    <span class="hero-tag">
+                        EASY • FAST • SECURE
+                    </span>
+
+                    <h1>
+                        Rent Your Perfect Vehicle
+                    </h1>
+
+                    <p>
+                        Choose from our wide range of cars,
+                        bikes and SUVs for your next journey.
+                    </p>
+
+                    <button onclick="openVehicles()">
+                        Explore Vehicles →
+                    </button>
+
+                </div>
+
+                <div class="hero-car">
+                    🚙
+                </div>
+
+            </div>
+
+
+            <!-- STATISTICS -->
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        🚗
+                    </div>
+
+                    <div>
+                        <span>Available Vehicles</span>
+                        <h2>24</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📋
+                    </div>
+
+                    <div>
+                        <span>My Bookings</span>
+                        <h2 id="homeBookings">
+                            0
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+```
